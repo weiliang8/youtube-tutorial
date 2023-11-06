@@ -1,0 +1,59 @@
+modules documentation: www.npmjs.com 
+
+When start a new project:
+1. We need to create a package.js file, it is a configuration file for project
+> npm init
+package name: (starter) keyin: node-farm
+version: (1.0.0) <enter to skip>                                      
+description: keyin: Learning node.js
+entry point: (index.js) <enter to skip>                                 
+test command: <enter to skip>                                           
+git repository: <enter to skip>                                         
+keywords: <enter to skip>                                            
+author: keyin: WL                                                
+license: (ISC) <enter to skip> 
+
+2. To install regular dependency for production in npm
+> npm install <package name>
+
+3. To install dependency for development - debugger tool, testing lib
+> npm install <package name> --save-development
+nodemon automatically restart the server whenever we made changes to working directory
+
+4. To install dependency globally (in local machine), so you do not need to install everytime when creating new proj
+> npm i <package name> --global
+
+5. To start running index.js
+> node i<tab> and it will automatically fill i with the filename
+> nodemon index.js
+replace script in package.json with "start": "nodemon index.js"
+> npm run start OR npm start
+
+6. package slugify to create unqiue string ?id=0 => Fresh-avocados
+
+7. Check if package is outdated
+> npm outdated
+
+8. Update package
+> npm install <package name>@<ver>.<ver>.<ver> OR npm update <packagename>
+
+9. Delete package
+> npm uninstall <package name>
+
+10. node_modules folder contains all the project dependency, we do not copy need to copy it into github or dropbox as can be install via npm
+> delete node_modules folder
+> npm install
+
+11. Share package-lock.json and package.json to other developer as it is required to reconstruct node_modules folder
+
+12. Tip to no block in NODEJS
+Dont use sync versions of functions in fs, crypto and zlib modules in callback functions
+
+Dont perform complex calculation (eg loops inside loops)
+
+Becareful with JSON in large objects
+
+Dont use too complex regualr expression
+
+13. Each JS file is called as a module
+> require() , exports or module.exports
